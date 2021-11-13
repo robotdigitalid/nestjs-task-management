@@ -17,3 +17,11 @@ GET localhost:3000/tasks/{{taskId}}
 
 ### Delete Task by Id
 DELETE localhost:3000/tasks/{{taskId}}
+
+### Update Task Status by Id
+PATCH localhost:3000/tasks/{{taskId}}/status
+Content-Type: application/json
+
+{
+  "status": "IN_PROGRESS"
+}
