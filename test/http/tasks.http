@@ -14,3 +14,6 @@ GET localhost:3000/tasks
 
 ### Get Task by Id
 GET localhost:3000/tasks/{{taskId}}
+
+### Delete Task by Id
+DELETE localhost:3000/tasks/{{taskId}}
