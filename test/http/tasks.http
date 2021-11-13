@@ -1,0 +1,13 @@
+### Create a task
+POST localhost:3000/tasks
+Content-Type: application/json
+
+{
+  "title": "Test Task",
+  "description": "Test Description"
+}
+
+### Get All Tasks
+GET localhost:3000/tasks
+
+###
