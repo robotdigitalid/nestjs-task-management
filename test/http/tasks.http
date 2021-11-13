@@ -7,7 +7,10 @@ Content-Type: application/json
   "description": "Test Description"
 }
 
+> {% client.global.set('taskId', response.body.id) %}
+
 ### Get All Tasks
 GET localhost:3000/tasks
 
-###
+### Get Task by Id
+GET localhost:3000/tasks/{{taskId}}
