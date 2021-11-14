@@ -17,6 +17,13 @@ import { AuthModule } from './auth/auth.module';
       inject: [ConfigService],
       useFactory: async (config: ConfigService) => ({
         type: 'postgres',
+        ssl: config.get('NODE_ENV') === 'production',
+        extra: {
+          ssl:
+            config.get('NODE_ENV') === 'production'
+              ? { rejectUnauthorized: false }
+              : null,
+        },
         host: config.get('DB_HOST'),
         port: config.get('DB_PORT'),
         username: config.get('DB_USERNAME'),
